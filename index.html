@@ -11,14 +11,6 @@
         max-width: 300px;
         height: auto;
       }
-      #audio-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      audio {
-        margin-top: 20px;
-      }
     </style>
   <body>
     <div id="valentineQuestion"><b>Will you be my valentine?</b></div>
@@ -28,19 +20,17 @@
     <button class="answerButton" id="noButton">I dont o(╥﹏╥)o</button>
     <br />
     <img src="hamster.jpg" alt="cat asking question" class="responsive" />
-    <div id="audio-container">
-      <audio controls autoplay loop>
-        <source src="hamster.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
-    </div>
     <script>
-      document.getElementById("noButton").addEventListener("click", function () {
-      var audio = document.getElementById('audio');
-      audio.play();
-      var yesButton = document.querySelector('button[onclick*="thankyou.html"]');
-      var currentFontSize = parseInt(window.getComputedStyle(yesButton).fontSize);
-      yesButton.style.fontSize = currentFontSize + 10 + "px"; // Increase font size by 10px
+     document
+        .getElementById("noButton")
+        .addEventListener("click", function () {
+          var yesButton = document.querySelector(
+            'button[onclick*="thankyou.html"]'
+          );
+          var currentFontSize = parseInt(
+            window.getComputedStyle(yesButton).fontSize
+          );
+          yesButton.style.fontSize = currentFontSize + 10 + "px"; // Increase font size by 5px
     });
     </script>
   </body>
