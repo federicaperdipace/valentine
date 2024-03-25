@@ -25,7 +25,7 @@
     <button class="answerButton" onclick="location.href='thankyou.html'">
       Yes
     </button>
-    <button class="answerButton" id="noButton">I no no wanna o(╥﹏╥)o</button>
+    <button class="answerButton" id="noButton">I dont o(╥﹏╥)o</button>
     <br />
     <img src="hamster.jpg" alt="cat asking question" class="responsive" />
     <div id="audio-container">
@@ -35,9 +35,10 @@
       </audio>
     </div>
     <script>
-      document
-        .getElementById("noButton")
-        .addEventListener("click", function () {
+      document.getElementById("noButton").addEventListener("click", function () {
+      var audio = document.getElementById('audio');
+      audio.play();
+      document.addEventListener("click", function () {
           var yesButton = document.querySelector(
             'button[onclick*="thankyou.html"]'
           );
